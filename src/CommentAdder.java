@@ -6,12 +6,12 @@ public class CommentAdder {
     long beginning2;
     long beginning3;
     long beginning4;
-    
+
     long beginning5;
     long beginning6;
     long beginning7;
     long beginning8;
-    
+
     static final long ONE_SECOND = 1000000000L;
 
 
@@ -27,7 +27,7 @@ public class CommentAdder {
     public void addCommentsTo(CommentCounter commentCounter){
 
         int nComments = 0;
-        
+
         if (this.getTimeElapsed1() > SingleLineComment.PERIOD) nComments += (SingleLineComment.quantity * SingleLineComment.VALUE);
         if (this.getTimeElapsed2() > MultiLineComment.PERIOD) nComments += (MultiLineComment.quantity * MultiLineComment.VALUE);
         if (this.getTimeElapsed3() > JavaDocAsset.PERIOD) nComments += (JavaDocAsset.quantity * JavaDocAsset.VALUE);
