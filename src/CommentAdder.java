@@ -32,15 +32,15 @@ public class CommentAdder {
         int nComments = 0;
 
         //this be a comment;
-        
-        if (this.getTimeElapsed1() > assetObjects[0].period) nComments += (assetObjects[0].quantity * assetObjects[0].value);
-        if (this.getTimeElapsed2() > assetObjects[1].period) nComments += (assetObjects[1].quantity * assetObjects[1].value);
-        if (this.getTimeElapsed3() > assetObjects[2].period) nComments += (assetObjects[2].quantity * assetObjects[2].value);
-        if (this.getTimeElapsed4() > assetObjects[3].period) nComments += (assetObjects[3].quantity * assetObjects[3].value);
-        if (this.getTimeElapsed5() > assetObjects[4].period) nComments += (assetObjects[4].quantity * assetObjects[4].value);
-        if (this.getTimeElapsed6() > assetObjects[5].period) nComments += (assetObjects[5].quantity * assetObjects[5].value);
-        if (this.getTimeElapsed7() > assetObjects[6].period) nComments += (assetObjects[6].quantity * assetObjects[6].value);
-        if (this.getTimeElapsed8() > assetObjects[7].period) nComments += (assetObjects[7].quantity * assetObjects[7].value);
+         
+        if (this.getTimeElapsed1() > assetObjects[0].getPeriod()) nComments += (assetObjects[0].getQuantity() * assetObjects[0].getValue());
+        if (this.getTimeElapsed2() > assetObjects[1].getPeriod()) nComments += (assetObjects[1].getQuantity() * assetObjects[1].getValue());
+        if (this.getTimeElapsed3() > assetObjects[2].getPeriod()) nComments += (assetObjects[2].getQuantity() * assetObjects[2].getValue());
+        if (this.getTimeElapsed4() > assetObjects[3].getPeriod()) nComments += (assetObjects[3].getQuantity() * assetObjects[3].getValue());
+        if (this.getTimeElapsed5() > assetObjects[4].getPeriod()) nComments += (assetObjects[4].getQuantity() * assetObjects[4].getValue());
+        if (this.getTimeElapsed6() > assetObjects[5].getPeriod()) nComments += (assetObjects[5].getQuantity() * assetObjects[5].getValue());
+        if (this.getTimeElapsed7() > assetObjects[6].getPeriod()) nComments += (assetObjects[6].getQuantity() * assetObjects[6].getValue());
+        if (this.getTimeElapsed8() > assetObjects[7].getPeriod()) nComments += (assetObjects[7].getQuantity() * assetObjects[7].getValue());
 
         commentCounter.addComments(nComments);
     }
