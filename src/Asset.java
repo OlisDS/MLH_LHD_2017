@@ -38,6 +38,11 @@ public class Asset {
     public int getValue(){
         return this.value;
     }
+    
+    public int getPeriod() { 
+        return this.period; 
+    }
+
 
 }
 
