@@ -11,12 +11,15 @@ public class CommentAdder {
     long beginning6;
     long beginning7;
     long beginning8;
+
+    Asset[] assetObjects = new Asset[8];
     
     static final long ONE_SECOND = 1000000000L;
 
 
 
-    public CommentAdder(){
+    public CommentAdder(Asset[] assetObjects){
+        this.assetObject = assetObjects
         this.setTimers();
     }
 
@@ -28,14 +31,16 @@ public class CommentAdder {
 
         int nComments = 0;
         
-        if (this.getTimeElapsed1() > SingleLineComment.PERIOD) nComments += (SingleLineComment.quantity * SingleLineComment.VALUE);
-        if (this.getTimeElapsed2() > MultiLineComment.PERIOD) nComments += (MultiLineComment.quantity * MultiLineComment.VALUE);
-        if (this.getTimeElapsed3() > JavaDocAsset.PERIOD) nComments += (JavaDocAsset.quantity * JavaDocAsset.VALUE);
-        if (this.getTimeElapsed4() > ReadMeAsset.PERIOD) nComments += (ReadMeAsset.quantity * ReadMeAsset.VALUE);
-        if (this.getTimeElapsed5() > HeadDesignPattern.PERIOD) nComments += (HeadDesignPattern.quantity * HeadDesignPattern.VALUE);
-        if (this.getTimeElapsed6() > QACommenter.PERIOD) nComments += (QACommenter.quantity * QACommenter.VALUE);
-        if (this.getTimeElapsed7() > AutomaticCommentScript.PERIOD) nComments += (AutomaticCommentScript.quantity * AutomaticCommentScript.VALUE);
-        if (this.getTimeElapsed8() > ReadableCodeAsset.PERIOD) nComments += (ReadableCodeAsset.quantity * ReadableCodeAsset.VALUE);
+        if (this.getTimeElapsed1() > assetObjects[0].period) nComments += (assetObjects[0].quantity * assetObjects[0].value);
+        if (this.getTimeElapsed2() > assetObjects[1].period) nComments += (assetObjects[1].quantity * assetObjects[1].value);
+        if (this.getTimeElapsed3() > assetObjects[2].period) nComments += (assetObjects[2].quantity * assetObjects[2].value);
+        if (this.getTimeElapsed4() > assetObjects[3].period) nComments += (assetObjects[3].quantity * assetObjects[3].value);
+        if (this.getTimeElapsed5() > assetObjects[4].period) nComments += (assetObjects[4].quantity * assetObjects[4].value);
+        if (this.getTimeElapsed6() > assetObjects[5].period) nComments += (assetObjects[5].quantity * assetObjects[5].value);
+        if (this.getTimeElapsed7() > assetObjects[6].period) nComments += (assetObjects[6].quantity * assetObjects[6].value);
+        if (this.getTimeElapsed8() > assetObjects[7].period) nComments += (assetObjects[7].quantity * assetObjects[7].value);
+
+        commentCounter.addComments(nComments);
     }
 
     private long getTimeElapsed1(){ return System.nanoTime() - beginning1; }
@@ -64,7 +69,6 @@ public class CommentAdder {
         this.resetTimer6();
         this.resetTimer7();
         this.resetTimer8();
-
     }
 
 
