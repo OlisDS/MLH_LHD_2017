@@ -1,4 +1,4 @@
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
@@ -10,15 +10,18 @@ import javax.swing.ImageIcon;
 public class CommentButton extends JFrame{
 
     private JButton comment;
-    private JButton reg;
+    GridBagConstraints layout = new GridBagConstraints();
 
     public CommentButton() {
         super("Comment Clicker");
-        setLayout(new FlowLayout());
+        setLayout(new GridBagLayout());
 
         Icon commentIcon = new ImageIcon(getClass().getResource("export.png"));
         comment = new JButton("Comment", commentIcon);
-        add(comment);
+        layout.gridx = 0;
+        layout.gridy = 0;
+
+        add(comment, layout);
 
         Handler click = new Handler();
         comment.addActionListener(click);
