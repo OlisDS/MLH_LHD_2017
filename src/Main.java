@@ -13,6 +13,9 @@ public class Main {
         initialize(assetTypes)
         
         CommentAdder adder = new CommentAdder(assetTypes);
+        
+        Graphics graphics = new Graphics;
+        graphics.init();
 
         gameLoop:
         while (true) {
