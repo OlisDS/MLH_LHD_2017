@@ -1,3 +1,5 @@
+import Assets.*;
+
 public class CommentAdder {
 
     long beginning1;
@@ -26,14 +28,14 @@ public class CommentAdder {
 
         int nComments = 0;
         
-        if (this.getTimeElapsed1() > SingleLineComments.PERIOD) nComments += (SingleLineComments.quantity * SingleLineComments.VALUE);
+        if (this.getTimeElapsed1() > SingleLineComment.PERIOD) nComments += (SingleLineComment.quantity * SingleLineComment.VALUE);
         if (this.getTimeElapsed2() > MultiLineComment.PERIOD) nComments += (MultiLineComment.quantity * MultiLineComment.VALUE);
-        if (this.getTimeElapsed3() > JavaDoc.PERIOD) nComments += (JavaDoc.quantity * JavaDoc.VALUE);
-        if (this.getTimeElapsed4() > ReadMeFile.PERIOD) nComments += (ReadMeFile.quantity * ReadMeFile.VALUE);
-        if (this.getTimeElapsed5() > HeaderAndDesignPatterns.PERIOD) nComments += (HeaderAndDesignPatterns.quantity * HeaderAndDesignPatterns.VALUE);
+        if (this.getTimeElapsed3() > JavaDocAsset.PERIOD) nComments += (JavaDocAsset.quantity * JavaDocAsset.VALUE);
+        if (this.getTimeElapsed4() > ReadMeAsset.PERIOD) nComments += (ReadMeAsset.quantity * ReadMeAsset.VALUE);
+        if (this.getTimeElapsed5() > HeadDesignPattern.PERIOD) nComments += (HeadDesignPattern.quantity * HeadDesignPattern.VALUE);
         if (this.getTimeElapsed6() > QACommenter.PERIOD) nComments += (QACommenter.quantity * QACommenter.VALUE);
-        if (this.getTimeElapsed7() > SingleLineComments.PERIOD) nComments += (SingleLineComments.quantity * SingleLineComments.VALUE);
-        if (this.getTimeElapsed8() > SingleLineComments.PERIOD) nComments += (SingleLineComments.quantity * SingleLineComments.VALUE);
+        if (this.getTimeElapsed7() > AutomaticCommentScript.PERIOD) nComments += (AutomaticCommentScript.quantity * AutomaticCommentScript.VALUE);
+        if (this.getTimeElapsed8() > ReadableCodeAsset.PERIOD) nComments += (ReadableCodeAsset.quantity * ReadableCodeAsset.VALUE);
 
 
 
