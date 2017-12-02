@@ -5,17 +5,17 @@ public class Main {
 
         testInventory();
 
-        Timer timer = new Timer();
+        CommentAdder adder = new CommentAdder();
 
 
         gameLoop:
         while (true) {
-            timer.addCommentsTo(commentCounter);
+            adder.addCommentsTo(commentCounter);
             System.out.println(System.nanoTime() + ":\t" + commentCounter.getNComments());
         }
     }
 
     public static void testInventory() {
-        CommentAssets.oneSecondAuto = true;
+        //set values of how much of each asset we have
     }
 }

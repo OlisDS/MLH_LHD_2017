@@ -1,6 +1,6 @@
 public class CommentCounter {
 
-    long nComments;
+    static long nComments;
 
     public CommentCounter(){
         nComments = 0;
