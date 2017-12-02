@@ -3,6 +3,7 @@ public class Timer {
     long startTime;
 
     long timeElapsed;
+    int secondsPassed;
 
     public Timer(){
         this.startTime = System.nanoTime();
@@ -21,6 +22,11 @@ public class Timer {
             this.startTime = System.nanoTime();
         }
 
+        if (CommentAssets.oneSecondAuto && getTimeElapsed() > 1000000000L){
+            nComments = 1;
+            this.startTime = System.nanoTime();
+        }
+
         commentCounter.addComments(nComments);
 
 
@@ -30,4 +36,6 @@ public class Timer {
     public long getTimeElapsed(){
         return System.nanoTime() - startTime;
     }
+
+
 }
