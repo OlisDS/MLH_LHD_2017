@@ -17,7 +17,7 @@ public class CommentAdder {
 
 
     public CommentAdder(){
-        
+        this.setTimers();
     }
 
     public long getTimeElapsedInNS(){
@@ -36,11 +36,6 @@ public class CommentAdder {
         if (this.getTimeElapsed6() > QACommenter.PERIOD) nComments += (QACommenter.quantity * QACommenter.VALUE);
         if (this.getTimeElapsed7() > AutomaticCommentScript.PERIOD) nComments += (AutomaticCommentScript.quantity * AutomaticCommentScript.VALUE);
         if (this.getTimeElapsed8() > ReadableCodeAsset.PERIOD) nComments += (ReadableCodeAsset.quantity * ReadableCodeAsset.VALUE);
-
-
-
-
-
     }
 
     private long getTimeElapsed1(){ return System.nanoTime() - beginning1; }
@@ -59,6 +54,18 @@ public class CommentAdder {
     private void resetTimer6(){ this.beginning6 = 0; }
     private void resetTimer7(){ this.beginning7 = 0; }
     private void resetTimer8(){ this.beginning8 = 0; }
+
+    private void setTimers(){
+        this.resetTimer1();
+        this.resetTimer2();
+        this.resetTimer3();
+        this.resetTimer4();
+        this.resetTimer5();
+        this.resetTimer6();
+        this.resetTimer7();
+        this.resetTimer8();
+
+    }
 
 
 
