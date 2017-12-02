@@ -8,7 +8,7 @@ public class Main {
 
         testInventory();
         
-        Asset[] assetTypes = new Asset[8];
+        assetTypes = new Asset[8];
         
         initialize(assetTypes)
         
