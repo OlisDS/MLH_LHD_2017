@@ -1,4 +1,5 @@
 package Assets;
 
-public class SingleLineComment {
+public class SingleLineComment implements Asset{
+
 }
