@@ -19,7 +19,7 @@ public class CommentAdder {
 
 
     public CommentAdder(Asset[] assetObjects){
-        this.assetObject = assetObjects
+        this.assetObjects = assetObjects
         this.setTimers();
     }
 
@@ -30,6 +30,8 @@ public class CommentAdder {
     public void addCommentsTo(CommentCounter commentCounter){
 
         int nComments = 0;
+
+        //this be a comment;
         
         if (this.getTimeElapsed1() > assetObjects[0].period) nComments += (assetObjects[0].quantity * assetObjects[0].value);
         if (this.getTimeElapsed2() > assetObjects[1].period) nComments += (assetObjects[1].quantity * assetObjects[1].value);
