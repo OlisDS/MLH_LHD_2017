@@ -6,17 +6,14 @@ public class CommentAdder {
     long beginning2;
     long beginning3;
     long beginning4;
-
+    
     long beginning5;
     long beginning6;
     long beginning7;
     long beginning8;
 
-<<<<<<< HEAD
-=======
     Asset[] assetObjects = new Asset[8];
     
->>>>>>> 6365508635b066ab004eb3640210f8068dac131e
     static final long ONE_SECOND = 1000000000L;
 
 
@@ -33,17 +30,8 @@ public class CommentAdder {
     public void addCommentsTo(CommentCounter commentCounter){
 
         int nComments = 0;
-<<<<<<< HEAD
 
-        if (this.getTimeElapsed1() > SingleLineComment.PERIOD) nComments += (SingleLineComment.quantity * SingleLineComment.VALUE);
-        if (this.getTimeElapsed2() > MultiLineComment.PERIOD) nComments += (MultiLineComment.quantity * MultiLineComment.VALUE);
-        if (this.getTimeElapsed3() > JavaDocAsset.PERIOD) nComments += (JavaDocAsset.quantity * JavaDocAsset.VALUE);
-        if (this.getTimeElapsed4() > ReadMeAsset.PERIOD) nComments += (ReadMeAsset.quantity * ReadMeAsset.VALUE);
-        if (this.getTimeElapsed5() > HeadDesignPattern.PERIOD) nComments += (HeadDesignPattern.quantity * HeadDesignPattern.VALUE);
-        if (this.getTimeElapsed6() > QACommenter.PERIOD) nComments += (QACommenter.quantity * QACommenter.VALUE);
-        if (this.getTimeElapsed7() > AutomaticCommentScript.PERIOD) nComments += (AutomaticCommentScript.quantity * AutomaticCommentScript.VALUE);
-        if (this.getTimeElapsed8() > ReadableCodeAsset.PERIOD) nComments += (ReadableCodeAsset.quantity * ReadableCodeAsset.VALUE);
-=======
+        //this be a comment;
         
         if (this.getTimeElapsed1() > assetObjects[0].period) nComments += (assetObjects[0].quantity * assetObjects[0].value);
         if (this.getTimeElapsed2() > assetObjects[1].period) nComments += (assetObjects[1].quantity * assetObjects[1].value);
@@ -55,7 +43,6 @@ public class CommentAdder {
         if (this.getTimeElapsed8() > assetObjects[7].period) nComments += (assetObjects[7].quantity * assetObjects[7].value);
 
         commentCounter.addComments(nComments);
->>>>>>> 6365508635b066ab004eb3640210f8068dac131e
     }
 
     private long getTimeElapsed1(){ return System.nanoTime() - beginning1; }
