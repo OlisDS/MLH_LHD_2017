@@ -5,10 +5,12 @@ public class Asset {
     private final int initialPrice;
     private int price;
     private final int period;
+    private final int value;
 
-    Asset(int initialPrice, int period){
+    Asset(int initialPrice, int value, int period){
         this.quantity = 0;
         this.initialPrice = 10;
+        this.value = value;
         this.price = initialPrice;
         this.period = period;
     }
@@ -25,4 +27,17 @@ public class Asset {
         this.price = (int)Math.floor(this.initialPrice * Math.pow(1.15, this.quantity));
     }
 
+    public int getQuantity(){
+        return this.quantity;
+    }
+
+    public int getPrice(){
+        return this.price;
+    }
+
+    public int getValue(){
+        return this.value;
+    }
+
 }
+
