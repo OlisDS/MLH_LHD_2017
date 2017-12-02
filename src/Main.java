@@ -1,7 +1,10 @@
 public class Main {
 
+    static Asset[] assetTypes;
+    static CommentCounter commentCounter;
+    
     public static void main(String[] args) {
-        CommentCounter commentCounter = new CommentCounter();
+        commentCounter = new CommentCounter();
 
         testInventory();
         
