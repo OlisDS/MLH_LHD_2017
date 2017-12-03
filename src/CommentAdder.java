@@ -19,7 +19,7 @@ public class CommentAdder {
 
 
     public CommentAdder(Asset[] assetObjects){
-        this.assetObjects = assetObjects
+        this.assetObjects = assetObjects;
         this.setTimers();
     }
 
@@ -33,14 +33,38 @@ public class CommentAdder {
 
         //this be a comment;
          
-        if (this.getTimeElapsed1() > assetObjects[0].getPeriod()) nComments += (assetObjects[0].getQuantity() * assetObjects[0].getValue());
-        if (this.getTimeElapsed2() > assetObjects[1].getPeriod()) nComments += (assetObjects[1].getQuantity() * assetObjects[1].getValue());
-        if (this.getTimeElapsed3() > assetObjects[2].getPeriod()) nComments += (assetObjects[2].getQuantity() * assetObjects[2].getValue());
-        if (this.getTimeElapsed4() > assetObjects[3].getPeriod()) nComments += (assetObjects[3].getQuantity() * assetObjects[3].getValue());
-        if (this.getTimeElapsed5() > assetObjects[4].getPeriod()) nComments += (assetObjects[4].getQuantity() * assetObjects[4].getValue());
-        if (this.getTimeElapsed6() > assetObjects[5].getPeriod()) nComments += (assetObjects[5].getQuantity() * assetObjects[5].getValue());
-        if (this.getTimeElapsed7() > assetObjects[6].getPeriod()) nComments += (assetObjects[6].getQuantity() * assetObjects[6].getValue());
-        if (this.getTimeElapsed8() > assetObjects[7].getPeriod()) nComments += (assetObjects[7].getQuantity() * assetObjects[7].getValue());
+        if (this.getTimeElapsed1() > assetObjects[0].getPeriod()){
+            nComments += (assetObjects[0].getQuantity() * assetObjects[0].getValue());
+            resetTimer1();
+        }
+        if (this.getTimeElapsed2() > assetObjects[1].getPeriod()){
+            nComments += (assetObjects[1].getQuantity() * assetObjects[1].getValue());
+            resetTimer2();
+        }
+        if (this.getTimeElapsed3() > assetObjects[2].getPeriod()){
+            nComments += (assetObjects[2].getQuantity() * assetObjects[2].getValue());
+            resetTimer3();
+        }
+        if (this.getTimeElapsed4() > assetObjects[3].getPeriod()){
+            nComments += (assetObjects[3].getQuantity() * assetObjects[3].getValue());
+            resetTimer4();
+        }
+        if (this.getTimeElapsed5() > assetObjects[4].getPeriod()){
+            nComments += (assetObjects[4].getQuantity() * assetObjects[4].getValue());
+            resetTimer5();
+        }
+        if (this.getTimeElapsed6() > assetObjects[5].getPeriod()){
+            nComments += (assetObjects[5].getQuantity() * assetObjects[5].getValue());
+            resetTimer6();
+        }
+        if (this.getTimeElapsed7() > assetObjects[6].getPeriod()){
+            nComments += (assetObjects[6].getQuantity() * assetObjects[6].getValue());
+            resetTimer7();
+        }
+        if (this.getTimeElapsed8() > assetObjects[7].getPeriod()){
+            nComments += (assetObjects[7].getQuantity() * assetObjects[7].getValue());
+            resetTimer8();
+        }
 
         commentCounter.addComments(nComments);
     }
@@ -53,14 +77,14 @@ public class CommentAdder {
     private long getTimeElapsed6(){ return System.nanoTime() - beginning6; }
     private long getTimeElapsed7(){ return System.nanoTime() - beginning7; }
     private long getTimeElapsed8(){ return System.nanoTime() - beginning8; }
-    private void resetTimer1(){ this.beginning1 = 0; }
-    private void resetTimer2(){ this.beginning2 = 0; }
-    private void resetTimer3(){ this.beginning3 = 0; }
-    private void resetTimer4(){ this.beginning4 = 0; }
-    private void resetTimer5(){ this.beginning5 = 0; }
-    private void resetTimer6(){ this.beginning6 = 0; }
-    private void resetTimer7(){ this.beginning7 = 0; }
-    private void resetTimer8(){ this.beginning8 = 0; }
+    private void resetTimer1(){ this.beginning1 = System.nanoTime(); }
+    private void resetTimer2(){ this.beginning2 = System.nanoTime(); }
+    private void resetTimer3(){ this.beginning3 = System.nanoTime(); }
+    private void resetTimer4(){ this.beginning4 = System.nanoTime(); }
+    private void resetTimer5(){ this.beginning5 = System.nanoTime(); }
+    private void resetTimer6(){ this.beginning6 = System.nanoTime(); }
+    private void resetTimer7(){ this.beginning7 = System.nanoTime(); }
+    private void resetTimer8(){ this.beginning8 = System.nanoTime(); }
 
     private void setTimers(){
         this.resetTimer1();
